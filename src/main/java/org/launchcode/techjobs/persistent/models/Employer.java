@@ -11,8 +11,8 @@ import org.launchcode.techjobs.persistent.controllers.EmployerController;
 @Entity
 public class Employer extends AbstractEntity {
 
-    @NotBlank(message="Location name cannot be blank")
     @Size(min=5, max=255, message="Must be between 5 and 255 characters")
+    @NotBlank(message="Location name cannot be blank")
     private String location;
 
     public Employer(){

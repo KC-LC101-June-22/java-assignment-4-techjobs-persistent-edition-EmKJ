@@ -7,8 +7,8 @@ import javax.validation.constraints.Size;
 @Entity
 public class Skill extends AbstractEntity {
 
-    @NotBlank(message="Please enter a skill description")
     @Size(min = 5, max = 255, message = "Description must be between 5 and 255 characters.")
+    @NotBlank(message="Please enter a skill description")
     private String description;
 
     public Skill() {

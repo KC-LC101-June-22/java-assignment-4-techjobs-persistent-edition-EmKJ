@@ -35,3 +35,7 @@ test {
 	useJUnitPlatform()
 	jvmArgs "-javaagent:${classpath.find { it.name.contains("jmockit") }.absolutePath}"
 }
+// required so we can check parameter names in autograding tests
+compileTestJava {
+	options.compilerArgs=["-parameters"]
+}
