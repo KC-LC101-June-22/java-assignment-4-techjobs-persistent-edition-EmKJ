@@ -1,9 +1,10 @@
 package org.launchcode.techjobs.persistent.models;
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
 
 @Entity
-public class Job{
+public class Job extends AbstractEntity{
 
     @Id
     @GeneratedValue
@@ -11,7 +12,9 @@ public class Job{
 
     private String name;
 
+    @NotBlank(message="Please select an employer")
     private String employer;
+
     private String skills;
 
     public Job() {

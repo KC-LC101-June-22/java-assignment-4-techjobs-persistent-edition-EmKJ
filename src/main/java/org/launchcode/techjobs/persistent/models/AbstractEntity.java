@@ -1,12 +1,17 @@
 package org.launchcode.techjobs.persistent.models;
 
 import java.util.Objects;
+import javax.persistence.*;
+import javax.validation.constraints.*;
 
-
+@MappedSuperclass
 public abstract class AbstractEntity {
-
+    @Id
+    @GeneratedValue
     private int id;
 
+    @NotBlank(message="Please enter a job name")
+    @Size(min=3, max=255, message="Must be between 3 and 255 characters")
     private String name;
 
     public int getId() {
