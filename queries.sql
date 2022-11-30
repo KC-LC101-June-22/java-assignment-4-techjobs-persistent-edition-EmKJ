@@ -8,5 +8,6 @@
 --SELECT name FROM employer WHERE location = "St. Louis City";
 
 -- Part 3: Test it with SQL
+--DROP TABLE `tech_jobs`.`job`
 
 -- Part 4: Test it with SQL
