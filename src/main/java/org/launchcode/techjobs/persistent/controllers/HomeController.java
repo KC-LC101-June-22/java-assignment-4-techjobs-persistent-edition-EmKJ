@@ -62,6 +62,9 @@ public class HomeController {
             model.addAttribute("title", "Add Job");
             return "add";
         }
+        if(newJob == null){
+            return "add";
+        }
 
         Optional<Employer> optEmployer = employerRepository.findById(employerId);
         if (optEmployer.isPresent()) {
