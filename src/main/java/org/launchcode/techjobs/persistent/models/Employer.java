@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
@@ -15,7 +16,8 @@ public class Employer extends AbstractEntity {
     @NotBlank(message="Location name cannot be blank")
     private String location;
 
-    @OneToMany(mappedBy = "employer_id")
+    @OneToMany
+    @JoinColumn(name = "employer_id")
     private final List<Job> jobs = new ArrayList<>();
 
     public Employer(){
