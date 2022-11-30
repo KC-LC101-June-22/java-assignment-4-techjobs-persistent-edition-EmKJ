@@ -37,7 +37,7 @@ public class HomeController {
     @Autowired
     private SkillRepository skillRepository;
 
-    @RequestMapping("")
+    @RequestMapping("index")
     public String index(Model model) {
 
         model.addAttribute("title", "My Jobs");
@@ -77,7 +77,7 @@ public class HomeController {
             //     newJob.addSkill(optSkill.get());
             // }
             
-            jobRepository.save(newJob);
+        jobRepository.save(newJob);
         return "redirect:";
     }
 

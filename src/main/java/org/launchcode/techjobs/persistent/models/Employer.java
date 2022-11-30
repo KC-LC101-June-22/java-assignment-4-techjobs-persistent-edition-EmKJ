@@ -15,7 +15,7 @@ public class Employer extends AbstractEntity {
     @NotBlank(message="Location name cannot be blank")
     private String location;
 
-    @OneToMany(mappedBy = "employer")
+    @OneToMany(mappedBy = "employer_id")
     private final List<Job> jobs = new ArrayList<>();
 
     public Employer(){

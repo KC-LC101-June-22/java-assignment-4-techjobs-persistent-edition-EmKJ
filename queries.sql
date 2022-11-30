@@ -5,10 +5,7 @@
 -- SELECT name FROM employer WHERE location = "St. Louis City";
 
 -- Part 3: Test it with SQL
--- DROP TABLE `tech_jobs`.`job`;
+-- DROP TABLE job;
 
 -- Part 4: Test it with SQL
--- SELECT DISTINCT name
--- FROM tech_jobs.skill
--- RIGHT JOIN tech_jobs.job_skills ON tech_jobs.job_skills.skills_id = tech_jobs.skill.id
--- ORDER BY name ASC;
+-- SELECT * FROM skill LEFT JOIN job_skills ON skill.id = job_skills.skills_id WHERE job_skills.jobs_id IS NOT NULL ORDER BY name ASC;
